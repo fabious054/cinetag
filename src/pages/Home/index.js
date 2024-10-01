@@ -6,6 +6,8 @@ import Banner from 'components/Banner';
 import Title from 'components/Title';
 import Card from 'components/Card';
 
+import videos from 'json/db.json';
+
 const Home = () => {
   return (
     <>
@@ -14,7 +16,11 @@ const Home = () => {
       <Title>
         <h1>Welcome to Cinetag</h1>
       </Title>
-      <Card id="1" title="The Shawshank Redemption" image="shawshank_redemption.jpg"/>
+      <section className={styles.container}>
+        {videos.map((video) => (
+          <Card key={video.id} {...video}/>
+        ))}
+      </section>
       <Footer/>
     </>
   );
