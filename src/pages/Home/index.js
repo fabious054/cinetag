@@ -11,7 +11,6 @@ import videos from 'json/db.json';
 const Home = () => {
   return (
     <>
-      <Header/>
       <Banner image="home"/>
       <Title>
         <h1>Welcome to Cinetag</h1>
@@ -21,7 +20,6 @@ const Home = () => {
           <Card key={video.id} {...video}/>
         ))}
       </section>
-      <Footer/>
     </>
   );
 }	
